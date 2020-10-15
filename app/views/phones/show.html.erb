@@ -1,0 +1,23 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="container text-center">
+<p>
+  <strong>Name:</strong>
+  <%= @phone.Name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @phone.Model %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @phone.Price %>
+</p>
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>
+
+</div>

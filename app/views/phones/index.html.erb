@@ -1,0 +1,107 @@
+<p id="notice"><%= notice %></p>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:gold  ";>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">PACECOM</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav ">
+    <li class="nav-item">
+      <a class="nav-link" href="#">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">NEWS</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PRODUCTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">PHONE</a>
+        <a class="dropdown-item" href="#">CAR</a>
+        <a class="dropdown-item" href="#">BIKES</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<%= image_tag("img/222.png", width: '120px',style: 'float:left') %>
+
+
+<div class="container">
+<h1>Phones</h1>
+
+
+
+<div class="row">
+  <div class="column">
+  <%= image_tag("img/phone.jpg", class:"img-responsive",  width:"300", height:"200", hspace: "20", style: "border:5px solid black") %> <br>
+  </div>
+  <div class="column">
+  <%= image_tag("img/one.jpg", class:"img-responsive",  width:"300", height:"200", hspace: "40", style: "border:5px solid black") %>
+  </div>
+  <div class="column">
+  <%= image_tag("img/sams.jpg", class:"img-responsive",  width:"300", height:"200", hspace: "40", style: "border:5px solid black" ) %>
+  </div>
+</div><br>
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"> INFO</button><BR>
+<div id="demo" class="collapse"><BR>
+
+    WILL KEEP YOU UPDATED ABOUT NEW PHONES
+</div>
+<BR>
+<BR>
+
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:1000%"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class= "table-responsive">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phones.each do |phone| %>
+      <tr >
+        <td><%= phone.Name %></td>
+        <td><%= phone.Model %></td>
+        <td><%= phone.Price %></td>
+        <td><%= link_to 'Show', phone %></td>
+        <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
+        <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '<button class="btn btn-primary">New Phone</button>'.html_safe, new_phone_path %>
