@@ -10,17 +10,19 @@
 </head>
 <body style="background-color:gold  ";>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark disply=block">
   <!-- Brand -->
   <a class="navbar-brand" href="#">PACECOM</a>
 
   <!-- Links -->
   <ul class="navbar-nav ">
     <li class="nav-item">
-      <a class="nav-link" href="#">ABOUT</a>
+  
+      <a class="nav-link" href="http://www.pacecom.co.in/">ABOUT</a>
+      
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">NEWS</a>
+      <a class="nav-link" href="http://www.pacecom.co.in/home/contacts">CONTACT</a>
     </li>
 
     <!-- Dropdown -->
@@ -29,13 +31,16 @@
         PRODUCTS
       </a>
       <div class="dropdown-menu">
+
         <a class="dropdown-item" href="#">PHONE</a>
-        <a class="dropdown-item" href="#">CAR</a>
+        <a class="dropdown-item" href="#section2">CAR</a>
         <a class="dropdown-item" href="#">BIKES</a>
-      </div>
+
+        </div>
     </li>
   </ul>
 </nav>
+<marquee >WELCOME TO PACECOM TECHNOLOGY PRIVATE LIMITED</marquee>
 
 <%= image_tag("img/222.png", width: '120px',style: 'float:left') %>
 
@@ -96,3 +101,31 @@
 <br>
 
 <%= link_to '<button class="btn btn-primary">Add Phone</button>'.html_safe, new_phone_path %>
+<br><br>
+
+
+<h2 id="section2">CARS</h2>
+
+<br><br>
+<div class="row">
+  <div class="column">
+  <%= image_tag("img/verna.jpg", class:"img-responsive",  width:"300", height:"200", hspace: "20", style: "border:5px solid black") %> <br>
+  </div>
+  <div class="column">
+  <%= image_tag("img/mahindra.jpg", class:"img-responsive",  width:"280", height:"210", hspace: "40", style: "border:5px solid black") %>
+  </div>
+  <div class="column">
+  <%= image_tag("img/maruthi.jpg", class:"img-responsive",  width:"310", height:"220", hspace: "40", style: "border:5px solid black" ) %>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:1000%"></div>
+</div>
+
+
+
+
+

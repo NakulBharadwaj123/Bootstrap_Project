@@ -1,5 +1,5 @@
 class PhonesController < ApplicationController
-  before_action :set_phone, only: [:show, :edit, :update, :destroy]
+  before_action :set_phone, only: [:show, :edit, :update, :destroy, :functions]
 
   # GET /phones
   # GET /phones.json
@@ -20,6 +20,8 @@ class PhonesController < ApplicationController
   # GET /phones/1/edit
   def edit
   end
+
+
 
   # POST /phones
   # POST /phones.json
